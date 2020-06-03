@@ -1,0 +1,67 @@
+.container{
+    width: 100%;
+    &__heading{
+        font-size: 20px;
+        font-weight: bolder;
+        text-align: center;
+        margin: 2rem;
+        letter-spacing: 0.6px;
+    }
+    &__data{
+        width: calc(100% - 2rem);
+        margin: 1rem;
+        &__label{
+            margin-bottom: 0.5rem;
+            font-size: 16px;
+        }
+        &__value{
+            font-size: 14px;
+            width: 80%;
+            margin-bottom: 1rem;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            padding: 0.5rem;
+            &:focus{
+                outline: none;
+                border : 1px solid  rgba(166,216,255,.29);
+                box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+            }
+        }
+    }
+    &__button{
+        width: calc(100% - 4rem);
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+.btn{
+    cursor: pointer;
+    min-width: 100px;
+    padding: .75rem;
+    &__save{
+        color: #293038;;
+        background-color: rgba(166,216,255,.29);
+        cursor: pointer;
+        min-width: 100px;
+        font-size: 14px;
+        border-radius: 7px;
+        border: solid 2px  rgba(166,216,255,.29);
+        margin-right: 0.5rem;
+    }
+    &__cancel{
+        color: #293038;
+        border: solid 2px #e2e4e6;
+        background-color: #e2e4e6;
+        border-radius: 7px;
+        font-size: 14px;
+    }
+    &:hover{
+      background-color: white;
+    }
+    &:focus{
+        outline: none;
+    }
+    :disabled{
+        
+    }
+}

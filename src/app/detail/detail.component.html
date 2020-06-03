@@ -1,0 +1,25 @@
+<div class="container">
+  <p class="container__heading">Contact Details</p>
+  <div *ngIf="person && personDetails" [formGroup]="personDetails">
+    <div class="container__data">
+      <p class="container__data__label">Name</p>
+      <input formControlName="name" type="text" class="container__data__value">
+    </div>
+    <div class="container__data">
+      <p class="container__data__label">Number</p>
+      <input class="container__data__value" formControlName="number" type="number">
+    </div>
+    <div class="container__data">
+      <p class="container__data__label">Age</p>
+      <input class="container__data__value" formControlName="age" type="number">
+    </div>
+    <div class="container__data">
+      <p class="container__data__label">Address</p>
+      <input class="container__data__value" formControlName="address" type="text">
+    </div>
+    <div class="container__button">
+      <button class="btn btn__save" role="button" [disabled]="!personDetails.valid" (click)="submitData()">Save</button>
+      <button class="btn btn__cancel" role="button" [disabled]="!personDetails.dirty" (click)="initForm()">Cancel</button>
+    </div>
+  </div>
+</div>
